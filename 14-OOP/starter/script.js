@@ -180,4 +180,16 @@ Student.prototype.introduce = function () {
 }
 const mike = new Student('Mike', 2018, 'Computer Science');
 console.log(mike)
-mike.introduce()
+mike.introduce();
+
+class StudentCl extends PersonCl {
+    constructor(fullname, birthYear, course) {
+        // Always needs to happen first!
+        super(fullname, birthYear);
+        // this.course = course;
+    }
+    introduce() {
+        console.log(`My`)
+    }
+}
+const paranja = new StudentCl('Pranjali Thete', 1989);
